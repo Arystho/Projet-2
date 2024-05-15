@@ -56,10 +56,20 @@ a{
     color: var(--black);
 }
 
+ul{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
 /* header */
 header{
     position: relative;
 } 
+
 a h1{
     padding: 15px 0;
     display: flex;
@@ -73,6 +83,7 @@ a h1{
 }
 
 /* body */
+/* Section #Find */
 #find{
     background: var(--yellow);
 }
@@ -123,6 +134,106 @@ a h1{
     font-size: 22px;
 }
 
+/* #find :hover */
+/* Section #works */
+#works{
+    margin: 25px 0
+}
+
+#works h2{
+    padding: 0 0 20px 10px;
+}
+
+#works ul{
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+#works ul li{
+    box-shadow: 0px 4px 15px 0px #00000026;
+    list-style: none;
+    padding: 16px 16px 17px 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+#works ul li a{
+    position: relative;
+    left: 8px;
+}
+
+#works ul li:nth-child(1)::before{
+    content:'1';
+    background: var(--orange);
+    color: var(--white);
+    position: absolute;
+    width: 23.09px;
+    height: 25px;
+    top: 13px;
+    left: -10px;
+    border-radius: 12.02px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#works ul li:nth-child(2)::before{
+    content:'2';
+    background: var(--orange);
+    color: var(--white);
+    position: absolute;
+    width: 23.09px;
+    height: 25px;
+    top: 13px;
+    left: -10px;
+    border-radius: 12.02px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#works ul li:nth-child(3)::before{
+    content:'3';
+    background: var(--orange);
+    color: var(--white);
+    position: absolute;
+    width: 23.09px;
+    height: 25px;
+    top: 13px;
+    left: -10px;
+    border-radius: 12.02px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* #works :hover */
+#find .professional form button:hover{
+    transition: all 0.4s;
+    transform: scale(1.02);
+}
+
+/* section #chose */
+#chose{
+    background: var(--yellow);
+    padding: 15px;
+}
+
+#chose article{
+    background: var(--white);
+    border-radius: 20px;
+}
+
+#chose article img{
+    border-radius: 20px 20px 0 0 ;
+}
+
+#chose article form{
+    border-top: 1px solid var(--yellow);
+    margin: 10px;
+}
+
+
 /* footer */
 footer div{
     background: var(--darkgrey);
@@ -145,16 +256,15 @@ footer article #fin{
     /* margin: 0 0 15px 10px; */
 }
 
-footer article #fin li a:hover{
-    color: var(--orange);
-}
-
 footer article #fin li{
     list-style-type: none;
     margin: 10px;
 }
 
-
+/* footer :hover */
+footer article #fin li a:hover{
+    color: var(--orange);
+}
 
 
 
