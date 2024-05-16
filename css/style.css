@@ -90,8 +90,8 @@ a h1{
 
 #find .professional{
     display: grid;
-    /* align-items: center; */
-    /* justify-items: center; */
+    /* align-items: center;
+    justify-items: center; */
     padding: 30px 15px;
     text-align: center;
     gap: 15px;
@@ -121,7 +121,7 @@ a h1{
     border: none;
     width: 145px;
     position: relative;
-    left: 70px;
+    left: 60px;
     cursor: pointer;
 }
 
@@ -135,6 +135,10 @@ a h1{
 }
 
 /* #find :hover */
+#find .professional form button:hover{
+    transition: all 0.4s;
+    transform: scale(1.02);
+}
 /* Section #works */
 #works{
     margin: 25px 0
@@ -208,24 +212,27 @@ a h1{
 }
 
 /* #works :hover */
-#find .professional form button:hover{
-    transition: all 0.4s;
-    transform: scale(1.02);
-}
-
 /* section #chose */
 #chose{
     background: var(--yellow);
-    padding: 15px;
+    padding: 0 15px 30px;
+    gap: 30px;
+    display: grid;
 }
 
 #chose article{
     background: var(--white);
     border-radius: 20px;
+    position: relative
+}
+
+#chose h2{
+    margin-top: 20px;
 }
 
 #chose article img{
     border-radius: 20px 20px 0 0 ;
+    height: 130px;
 }
 
 #chose article form{
@@ -233,6 +240,65 @@ a h1{
     margin: 10px;
 }
 
+#chose article a{
+    position: relative;
+    left: 10px;
+    top: 5px;
+}
+
+#chose article a p{
+    margin: 0;
+}
+
+#chose article form p{
+    margin: 5px 0 0 0;
+}
+
+#chose article form img{
+    height: 20px;
+    width: 20px;
+    position: relative;
+    left: 240px;
+    bottom: 25px;
+}
+
+#chose article form .solid{
+    position: relative;
+    left: 220px;
+}
+
+#chose article form .regular{
+    position: relative;
+    left: 220px;
+}
+
+#chose .load{
+    box-shadow: 0px 4px 4px 0px #00000040;
+    background: linear-gradient(194.29deg, #FF7800 15.56%, #FFAE00 100%);
+    border-radius: 30px;
+    padding: 10px 15.69px 10px 16px;
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+#chose .new::after{
+    content: 'New !';
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    background: var(--orange);
+    color: var(--white);
+    font-family: var(--Shrikhand);
+    padding: 2px 10px;
+    transform: rotate(-45deg);
+}
+
+/* #chose :hover */
+#chose .load:hover{
+    transition: all 0.4s;
+    transform: scale(1.02);
+}
 
 /* footer */
 footer div{
