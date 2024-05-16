@@ -293,6 +293,32 @@ a h1{
     padding: 2px 10px;
     transform: rotate(-45deg);
 }
+#chose .solid{
+    height: 20px;
+    width: 20px;
+    /* position: relative;
+    left: 240px;
+    bottom: 25px; */
+    display: none;
+    cursor: pointer;
+}
+
+#chose .regular{
+    height: 20px;
+    width: 20px;
+    /* position: relative; */
+    /* left: 240px;
+    bottom: 25px; */
+    cursor: pointer;
+}
+
+#thumbs-up-4:checked+label>.solid{
+    display: none;
+}
+
+#thumbs-up-4:checked+label>.regular{
+    display: inline-block;
+}
 
 /* #chose :hover */
 #chose .load:hover{
