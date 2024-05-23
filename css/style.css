@@ -86,6 +86,13 @@ a h1{
     right: 15px;
     top: 25px;
 }
+.nav-head{
+    display: none;
+}
+
+.nav-head ul li a:hover{
+    color: var(--yellow);
+}
 
 /* body */
 /* Section #Find */
@@ -115,6 +122,7 @@ a h1{
     color: var(--black);
     border: none;
     height: 34px;
+    width: 276px;
 }
 
 #find button{
@@ -124,15 +132,17 @@ a h1{
     border-radius: 30px;
     background: linear-gradient(198.58deg, #FF7800 15.56%, #FFAE00 100%);
     border: none;
-    width: 145px;
+    width: fit-content;
     position: relative;
-    left: 60px;
+    display: block;
     cursor: pointer;
+    margin: auto;
 }
 
 #find .professional form{
     display: grid;
     gap: 15px;
+    justify-content: center;
 }
 
 #find h2{
@@ -146,7 +156,8 @@ a h1{
 }
 /* Section #works */
 #works{
-    margin: 25px 0
+    margin: 25px 0;
+    padding: 30px 0;
 }
 
 #works h2{
@@ -156,6 +167,8 @@ a h1{
 #works ul{
     text-decoration: none;
     padding: 0 15px;
+    display: grid;
+    gap: 15px;
 }
 
 #works ul li{
@@ -233,6 +246,7 @@ a h1{
 
 #chose h2{
     margin-top: 20px;
+    padding-bottom: 25px;
 }
 
 #chose article img{
@@ -366,6 +380,7 @@ footer article ul li a:hover{
 .fa-arrow-left{
     position: absolute;
     top: 25px;
+    left: 20px;
 }
 
 /* body */
@@ -399,6 +414,9 @@ footer article ul li a:hover{
     margin: 0 10px;
     padding: 5px 0;
 }
+#smith img{
+    height: 300px;
+}
 
 /* Section #who */
 #who{
@@ -430,6 +448,7 @@ footer article ul li a:hover{
 #contact{
     padding: 10px;
     border-top: 1px solid var(--orange);
+    margin-bottom: 25px;
 }
 
 #contact h2{
@@ -444,6 +463,10 @@ footer article ul li a:hover{
     font-weight: 300;
 }
 
+#contact #call_send div ul li a:hover{
+    color: var(--yellow);
+}
+
 .fa-mobile-screen,
 .fa-envelope{
     color: var(--orange);
@@ -453,6 +476,27 @@ footer article ul li a:hover{
     gap: 15px;
     margin-bottom: 20px;
     padding-left: 10px;
+}
+
+#contact #politic{
+    display: flex;
+    margin: 10px 0;
+}
+
+#contact > form{
+    gap: 15px;
+    display: grid;
+}
+
+#contact > form input{
+    border: 1px solid var(--orange);
+    height: 33px;
+}
+
+#contact form #message{
+    border: 1px solid var(--orange);
+    font-family: var(--Roboto);
+    padding: 10px 0 145px;
 }
 
 /* Section #contact
@@ -471,11 +515,271 @@ Article #follow */
 #follow div{
     display: flex;
     justify-content: space-around;
+    padding: 15px 0;
 }
+
+.social:hover{
+    color: var(--orange);
+    transition: all 0.5s ease-in-out;
+}
+
 #send{
     box-shadow: 0px 4px 15px 0px #00000026;
-    border: 1px solid #FF7800;
+    border: 1px solid var(--orange);
     background: linear-gradient(195.34deg, #FF7800 15.56%, #FFAE00 100%);
     border-radius: 30px;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    padding: 5px 30px;
+}
+
+/* Animation index */
+.loader {
+    border: 16px solid var(--white);
+    border-top: 16px solid var(--orange);
+    color: var(--darkgrey);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite, FontBackground 1s ease-out 2s forwards;
+   }
+
+.font-trans{
+   position: fixed; /* Fixe le wrapper au viewport */top: 0;
+   left: 0;
+   width: 100vw; 
+   height: 100vh; 
+   background-color: var(--yellow); 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation: FontBackground 1s 3.5s forwards; z-index: 1000;
+   }
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}       
+    }
+@keyframes FontBackground{
+    0%{opacity: 1;}
+    100%{opacity: 0; display: none;}
+    }
+
+/* Animation constructeur */
+.FontTransition{
+    background-color: var(--white);
+    position: fixed; /* Fixe le wrapper au viewport */top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: FontBackground 1s 1.3s forwards; 
+    z-index: 1000;
+}
+#title{
+    z-index: 1001;
+    position: relative;
+}
+
+/* responsive index*/
+/* Responsive tablette - 1024px à 768px */
+@media screen and (min-width:768px){
+    #chose .container .list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+     }
+
+    #chose .container .list article{
+        width: 354px;
+    }
+
+    #choose{
+        width: 450px;
+    }
+}
+
+/* Responsive desktop - 1920px à 1024px */
+@media screen and (min-width:1024px){
+     #chose .container .list article{
+        width: 478px;
+    }
+
+    footer article div{
+        display: flex;
+        justify-content: center;
+    }
+
+    footer article ul{
+        display: flex;
+        flex-direction: row;
+        margin-top: 7px;
+    }
+
+    footer div article{
+        display: flex;
+        justify-content: center;
+        padding-top: 5px;
+    }
+
+    header .fa-bars{
+        display: none;
+    }
+
+    .nav-head{
+        display: flex;
+    }
+    header .nav-head ul{
+        position: absolute;
+        right: 15px;
+        top: 25px;
+        display: flex;
+        gap: 20px;
+        max-width: 470px;
+
+    }
+
+    .nav-head li a:hover{
+        color: var(--orange);
+    }
+
+    #works{
+        max-width: 990px;
+        margin: auto;
+    }
+
+    .container{
+        max-width: 990px;
+        margin: auto;
+    }
+
+}
+
+/* #chose .container h2{
+    position: relative;
+    right: 340px;
+    margin: 20px;
+} */
+
+/* responsive constructeur */
+@media screen and (min-width:768px){
+    #smith div{
+        display: flex;
+        justify-content: space-between;
+    }
+    #smith div form{
+        border: none;
+    }
+
+    #who h2{
+        display: grid;
+        justify-content: center;
+    }
+
+    #where h2{
+        display: grid;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    #contact h2{
+        display: grid;
+        justify-content: center;
+    }
+
+    #contact #call_send{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #contact #follow h3{
+        display: grid;
+        justify-content: center;
+    }
+}
+
+/* Responsive desktop - 1920px à 1024px */
+@media screen and (min-width:1024px){
+    #smith{
+        max-width: 990px;
+        margin: auto;
+    }
+
+    #smith div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #smith div form{
+        border: none;
+    }
+
+    #smith img{
+        height: 300px;
+    }
+
+    #who{
+        max-width: 990px;
+        margin: auto;
+    }
+
+    #who h2{
+        display: grid;
+        justify-content: center;
+    }
+
+    #where{
+        max-width: 990px;
+        margin: auto;
+    }
+
+    #where h2{
+        display: grid;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    #contact{
+        max-width: 990px;
+        margin: auto;
+    }
+
+    #contact h2{
+        display: grid;
+        justify-content: center;
+    }
+
+    #contact #call_send{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #contact #follow h3{
+            display: grid;
+            justify-content: center;
+    }
+
+    #foody div{
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    header{
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    /* .fa-arrow-left{
+        position: absolute
+    }
+
+    header nav{
+        position: absolute
+    } */
 
 }
